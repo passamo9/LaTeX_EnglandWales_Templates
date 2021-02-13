@@ -2,6 +2,8 @@
 
 \RequirePackage{soul}  % spaced out boxes
 \RequirePackage[normalem]{ulem}
+\RequirePackage[explicit]{titlesec}
+\RequirePackage{calc}
 
 \newcommand\court[1]{\def\@court{#1}}
 \newcommand\casenumber[1]{\def\@casenumber{#1}}
@@ -25,3 +27,12 @@
   \begin{flushright}\uline{Defendant}\end{flushright}
   \endgroup
 }
+
+%% Reformats \section
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}
+{\begin{center}
+    \vspace{-0.5em}
+    \rule[0.4em]{\widthof{\normalfont\bfseries\MakeUppercase{#1}}+2em}{1pt}\\\vspace{0.4em}
+    \MakeUppercase{#1}\vspace{0.6em}\\
+    \rule[0.5em]{\widthof{\normalfont\bfseries\MakeUppercase{#1}}+2em}{1pt}\\
+\end{center}}
