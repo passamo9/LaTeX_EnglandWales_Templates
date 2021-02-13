@@ -2,27 +2,23 @@
 
 I am an English lawyer.
 
-1. Reasons for starting this Project
+## Reasons for starting this Project
 
 I have been using Microsoft Word my entire life, and I really do not like the distraction that is the typesetting. LaTeX seems to provide an answer. 
 
 There seems to be already a KOMA-script support for jura a LaTeX project developed by German professors for German Law. I've checked, but its style is incompatible with the style used in England and Wales. Due to England and Wales' legal tradition, there are established ways in which a barrister advocates on behalf of a client. This is known as a pleading, which contains submissions, which are arguments, based on law and evidenced by facts. The traditional manner in which submissions are made are in writing, such as in a Particulars of Claim, or in Skeleton Arguments, which are the basis on which the oral submissions are made. These have an anachronistic style (which isn't going away). When these documents are drafted on Microsoft Word, they often do not look professional. LaTeX seems to be the solution. Lawyers need to look to the future to stay relevant.
 
-2. Objectives of this Project
+## Objectives of this Project
 
 I want to create templates that barristers and solicitors can use for their practice. This includes:
 
-    (a) Pleadings
+1. Pleadings
+    1. Particulars of Claims
+    1. Defences and Counterclaims
+1. Skeleton Arguments
+    1. Opinions
 
-       (i) Particulars of Claims
-
-        (ii) Defences and Counterclaims
-
-    (b) Skeleton Arguments
-
-    (c) Opinions
-
-3. Level of experience
+## Level of experience
 
 This is my first time using Github. Please give me feedback on the best way to manage and organise this project
 
