@@ -1,6 +1,6 @@
 \ProvidesPackage{engwales-plead}[2021-02-13 Package for pleading creation in England/Wales styles]
 
-\RequirePackage{soul}  % spaceout boxes
+\RequirePackage{soul}  % spaced out boxes
 \RequirePackage[normalem]{ulem}
 
 \newcommand\court[1]{\def\@court{#1}}
@@ -10,8 +10,7 @@
 
 \renewcommand\maketitle{%
   \begingroup
-  \linespread{1.5}
-  \setlength\parindent{0pt}\bfseries
+  \linespread{1.5}\setlength\parindent{0pt}\bfseries
   \parbox[t]{.65\textwidth}{\uline{\@court}}
   Case No~\@casenumber
 
