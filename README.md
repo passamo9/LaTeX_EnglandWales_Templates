@@ -16,7 +16,7 @@ I want to create templates that barristers and solicitors can use for their prac
     1. Particulars of Claims
     1. Defences and Counterclaims
 1. Skeleton Arguments
-    1. Opinions
+1. Opinions
 
 ## Level of experience
 
