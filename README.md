@@ -1,8 +1,12 @@
 # LaTeX_EnglandWales_Templates
 
-![Build LaTeX document](https://github.com/passamo9/LaTeX_EnglandWales_Templates/workflows/Build%20LaTeX%20document/badge.svg?branch=master)
+![Build LaTeX documents](https://github.com/passamo9/LaTeX_EnglandWales_Templates/workflows/Build%20LaTeX%20documents/badge.svg)
 
-Collection of layout templates for composing legal documents for England and Wales barristers. Check out our example PDFs [here](https://github.com/passamo9/LaTeX_EnglandWales_Templates/find/examples).
+Collection of layout templates
+for composing legal documents
+for England and Wales barristers.
+Check out our example PDFs
+[here](https://github.com/passamo9/LaTeX_EnglandWales_Templates/find/examples).
 
 ## Reasons for starting this Project
 
