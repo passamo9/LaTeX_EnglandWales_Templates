@@ -31,8 +31,11 @@
 \newcommand{\intro}{\section*{INTRODUCTION}}
 \newcommand{\facts}{\section*{FACTS}}
 
-%% Remove page numbers
-\pagestyle{empty}
+\usepackage{fancyhdr}
+\fancyhf{} % clear all
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\rfoot{\thepage}
+\pagestyle{fancy}
 
 %% Linespacing
 \linespread{1.5}
