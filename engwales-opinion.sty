@@ -1,0 +1,52 @@
+\ProvidesPackage{engwales-opinion}[2021-02-13 Package for pleading creation in England/Wales styles]
+
+\RequirePackage[explicit]{titlesec}
+\RequirePackage{enumitem}
+
+
+%% Formatting the main title
+\renewcommand\maketitle{%
+  \vspace*{-1.5cm}
+  \begin{center}
+    \bfseries
+    \renewcommand\arrayrulewidth{1.1pt}
+    \begin{tabular}{@{\hspace{12pt}}c@{\hspace{12pt}}}
+      \hline\\[-12pt]
+      \MakeUppercase{\@title}\\\ \\[-12pt]
+      \hline
+    \end{tabular}
+  \end{center}
+  \medskip
+}
+
+%% Formatting section and subsection titles
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}
+  {\vspace*{-0.25em}\underline{\MakeUppercase{#1}}\medskip}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesection}{1em}
+  {\vspace*{-0.25em}\underline{#1}\medskip}
+\titleformat{\subsubsection}{\normalfont}{\thesection}{1em}
+  {\medskip\underline{#1}\medskip}
+
+%% Create intro and facts commands for supposed convience
+\newcommand{\intro}{\section*{INTRODUCTION}}
+\newcommand{\facts}{\section*{FACTS}}
+
+%% Remove page numbers
+\pagestyle{empty}
+
+%% Linespacing
+\linespread{1.5}
+
+%% Allow for you to list items with the number in the margin
+\newcounter{point}
+\newenvironment{point}[1][leftmargin=0cm,labelsep=1cm]
+{\medskip\begin{enumerate}[#1]\refstepcounter{point}
+   \item[\thepoint.]
+}{\end{enumerate}\smallskip}
+
+%% Provides a signature command
+\newcommand{\signature}
+{
+  \vspace*{3em}\flushright%
+  \@author\\\@date
+}
