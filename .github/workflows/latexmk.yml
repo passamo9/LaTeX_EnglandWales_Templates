@@ -11,7 +11,7 @@ jobs:
         with:
           root_file: |
             pleading.tex
-          working_directroy:
+          working_directory:
             examples
           latexmk_use_xelatex: true
       - uses: fregante/setup-git-user@v1
