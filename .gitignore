@@ -5,3 +5,4 @@
 *.gz
 *.pdf
 !examples/*.pdf
+.~lock*
