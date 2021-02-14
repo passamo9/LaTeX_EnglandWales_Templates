@@ -28,8 +28,8 @@
   {\medskip\underline{#1}\medskip}
 
 %% Create intro and facts commands for supposed convience
-\newcommand{\intro}{\section*{INTRODUCTION}}
-\newcommand{\facts}{\section*{FACTS}}
+\newcommand{\intro}{\section{INTRODUCTION}}
+\newcommand{\facts}{\section{FACTS}}
 
 %% Page numbers
 \fancyhf{} % clear all
@@ -39,6 +39,9 @@
 
 %% Linespacing
 \linespread{1.5}
+
+%% Supress numbering for sections
+\setcounter{secnumdepth}{0}
 
 %% Allow for you to list items with the number in the margin
 \newcounter{point}
