@@ -30,6 +30,6 @@
 %% Allow for you to list items with the number in the margin
 \newcounter{point}
 \newenvironment{point}[1][]
-{\begin{enumerate}[leftmargin=0,labelsep=1cm]\refstepcounter{point}
+{\begin{enumerate}[leftmargin=*]\refstepcounter{point}
    \item[\thepoint.] #1
 }{\end{enumerate}}
