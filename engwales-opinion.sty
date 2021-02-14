@@ -2,7 +2,7 @@
 
 \RequirePackage[explicit]{titlesec}
 \RequirePackage{enumitem}
-
+\RequirePackage{fancyhdr}
 
 %% Formatting the main title
 \renewcommand\maketitle{%
@@ -31,7 +31,7 @@
 \newcommand{\intro}{\section*{INTRODUCTION}}
 \newcommand{\facts}{\section*{FACTS}}
 
-\usepackage{fancyhdr}
+%% Page numbers
 \fancyhf{} % clear all
 \renewcommand{\headrulewidth}{0pt} % remove the header rule
 \rfoot{\thepage}
