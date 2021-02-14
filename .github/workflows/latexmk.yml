@@ -20,5 +20,6 @@ jobs:
           git fetch origin examples
           git checkout -b examples origin/examples --merge
           git add *.pdf
+          git status | grep -q 'nothing added to commit' && exit
           git commit -m "ci: Update example PDFs."
           git push origin examples
