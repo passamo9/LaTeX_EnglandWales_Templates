@@ -17,10 +17,8 @@ jobs:
       - uses: fregante/setup-git-user@v1
       - name: Upload PDF to examples branch
         run: |
-          git stash push
           git fetch origin examples
-          git checkout -b examples origin/examples
-          git stash pop
+          git checkout -b examples origin/examples --merge
           git add *.pdf
           git commit -m "ci: Update example PDFs."
           git push origin examples
