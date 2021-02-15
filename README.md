@@ -1,8 +1,16 @@
 # LaTeX_EnglandWales_Templates
 
-I am an English lawyer.
+![Build LaTeX documents](https://github.com/passamo9/LaTeX_EnglandWales_Templates/workflows/Build%20LaTeX%20documents/badge.svg)
+
+Collection of layout templates
+for composing legal documents
+for England and Wales barristers.
+Check out our example PDFs
+[here](https://github.com/passamo9/LaTeX_EnglandWales_Templates/find/examples).
 
 ## Reasons for starting this Project
+
+I am an English lawyer.
 
 I have been using Microsoft Word my entire life, and I really do not like the distraction that is the typesetting. LaTeX seems to provide an answer. 
 
