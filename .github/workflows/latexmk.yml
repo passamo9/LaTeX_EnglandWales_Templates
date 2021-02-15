@@ -15,7 +15,7 @@ jobs:
             examples
           latexmk_use_xelatex: true
       - uses: fregante/setup-git-user@v1
-      - if: github.event_name == 'pull_request'
+      - if: github.event_name == 'push'
         name: Upload PDF to examples branch
         run: |
           git fetch origin examples
