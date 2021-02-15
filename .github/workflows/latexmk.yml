@@ -1,0 +1,27 @@
+name: Build LaTeX documents
+on: [push, pull_request]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: |
+            pleading.tex
+            opinion.tex
+          working_directory:
+            examples
+          latexmk_use_xelatex: true
+      - uses: fregante/setup-git-user@v1
+      - if: github.event_name == 'push'
+        name: Upload PDF to examples branch
+        run: |
+          git fetch origin examples
+          git checkout -b examples origin/examples --merge
+          git add *.pdf
+          git status | grep -q 'nothing added to commit' && exit
+          git commit -m "ci: Update example PDFs."
+          git push origin examples
