@@ -1,5 +1,5 @@
 name: Build LaTeX documents
-on: [push]
+on: [push, pull_request]
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -16,7 +16,8 @@ jobs:
             examples
           latexmk_use_xelatex: true
       - uses: fregante/setup-git-user@v1
-      - name: Upload PDF to examples branch
+      - if: github.event_name == 'push'
+        name: Upload PDF to examples branch
         run: |
           git fetch origin examples
           git checkout -b examples origin/examples --merge
