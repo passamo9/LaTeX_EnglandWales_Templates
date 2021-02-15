@@ -6,3 +6,4 @@
 *.pdf
 !examples/*.pdf
 .~lock*
+*.out
