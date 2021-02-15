@@ -11,6 +11,7 @@ jobs:
         with:
           root_file: |
             pleading.tex
+            opinion.tex
           working_directory:
             examples
           latexmk_use_xelatex: true
