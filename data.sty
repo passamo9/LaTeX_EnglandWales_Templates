@@ -1,0 +1,86 @@
+\RequirePackage{glossaries-extra}
+\RequirePackage{titlesec} % lets you change titles
+\RequirePackage{needspace} % tells latex that some things need space below them, or they look funny (e.g. section headers at the end of a page)
+\RequirePackage[margin=3cm]{geometry}
+\RequirePackage[
+pdfstartpage=1,
+hidelinks=true,
+bookmarks=true]%
+{hyperref}
+
+
+% This sets numbering to track all subsubsections, paragraphs, everything.
+\setcounter{secnumdepth}{6}
+
+% Now we change how paragraphs work
+
+\titleformat{\section} 
+	{\large\bfseries}%
+	{\thesection}%
+	{1em}%
+	{}%
+
+\titleformat{\subsection} 
+	{\leftskip=1em}%
+	{\thesubsection}%
+	{1em}%
+	{}%
+	[\needspace{1cm}]
+
+\titleformat{\subsubsection} 
+	{\leftskip=3em}%
+	{\thesubsubsection}%
+	{1em}%
+	{}%
+
+\titleformat{\paragraph} 
+	{\leftskip=6em}%
+	{\theparagraph}%
+	{1em}%
+	{}%
+	[\needspace{1cm}]
+
+\titleformat{\subparagraph} 
+	{\leftskip=8em}%
+	{\thesubparagraph}%
+	{1em}%
+	{}%
+
+\makeglossaries
+
+%%%%% Standard glossary entries - no need to change them %%%%%
+
+% These are here so they're only printed in glossaries when they're used.
+% No sense in spilling ink.
+
+\newglossaryentry{agreement}{
+	name={Agreement},
+	first={Agreement},
+	description={means this Data Processing Agreement and all Schedules}
+}
+
+\newglossaryentry{personalData}{
+	name={Company Personal Data},
+	description={means any Personal Data Processed by a Contracted Proecessor on behalf of Company pursuant to or in connection with the Principal Agreement}
+}
+
+\newglossaryentry{subprocessor}{
+	name={Contracted Processor},
+	description={means a Subprocessor}
+}
+
+\newglossaryentry{GDPR}{
+	name={Data Protection Laws},
+	description={means EU Data Protection Laws and, to the extend applicable, the data protection or privacy laws of any other country}
+}
+
+\newglossaryentry{EEA}{
+	name={EEA},
+	description={means the European Economic Area}
+}
+
+\newglossaryentry{dataLaws}{
+	name={EU Data Protection Laws},
+	description={means EU Directive 95/46/EC, as transposed into domestic legislation of each Member State and as amended, replaced, or superseded from time to time, including by the GDPR and and laws implementing or supplementing the GDPR}
+}
+
