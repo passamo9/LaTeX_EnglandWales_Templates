@@ -11,6 +11,7 @@ jobs:
         with:
           root_file: |
             pleading.tex
+            data_sharing.tex
             opinion.tex
           working_directory:
             examples
