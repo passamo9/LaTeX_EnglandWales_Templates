@@ -6,6 +6,13 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+      - name: Check all example LaTeX files are added to CI
+        run: |
+          git ls-files 'examples/*.tex' |
+            xargs -n1 sh -c 'grep -q "$(basename "$1")" .github/workflows/latexmk.yml' sh || {
+              echo 'Please add all of examples/*.tex to .github/workflows/latexmk.yml'
+              exit 1
+            }
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
