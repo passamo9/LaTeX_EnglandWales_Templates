@@ -4,3 +4,5 @@
 *.log
 *.gz
 *.pdf
+.~lock*
+*.out
