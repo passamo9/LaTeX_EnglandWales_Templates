@@ -28,13 +28,13 @@ jobs:
         run: |
           cd "$(git rev-parse --show-toplevel)/examples"
           git fetch origin examples
-          rm -rf /tmp/pdfs
-          mkdir -p /tmp/pdfs/
-          for f in *.pdf; do mv -f "$f" /tmp/pdfs/; done
+          rm -rf /tmp/tobecommited
+          mkdir -p /tmp/tobecommited/
+          for f in *.pdf *.tex; do cp -f "$f" /tmp/tobecommited/; done
           git checkout -b examples origin/examples
           git clean -df
-          for f in /tmp/pdfs/*.pdf; do mv -f "$f" ./; done
-          git add *.pdf
+          for f in /tmp/tobecommited/*; do mv -f "$f" ./; done
+          git add *.pdf *.tex
           git status
           git commit -m "ci: Update example PDFs." --no-allow-empty || exit 0
           git push origin examples
