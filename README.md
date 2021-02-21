@@ -4,7 +4,7 @@
 
 Collection of layout templates
 for composing legal documents
-for England and Wales barristers.
+for lawyers in England and Wales.
 Check out our example PDFs
 [here](https://github.com/passamo9/LaTeX_EnglandWales_Templates/find/examples).
 
