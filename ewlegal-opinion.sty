@@ -1,0 +1,56 @@
+%% TODO Stock beginning text, copyrights and project info and all that
+
+\ProvidesPackage{ewlegal-opinion}[2021-02-13 England and Wales Opinion Legal Template]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Typeset Elements
+%%%%%
+
+%% Formatting the main title
+\renewcommand\maketitle{%
+  \begin{center}
+    \bfseries
+    \tramlines{\@title}
+  \end{center}
+  \medskip
+}
+
+%% Determine the spacing of the numbers in the point env
+% \renewcommand{\pointspacing}{leftmargin=0,labelsep=1cm}
+% TODO This work around to reusing the point env does not work. FIX!
+
+%% Create intro and facts commands for supposed convience
+\newcommand{\intro}{\section{INTRODUCTION}}
+\newcommand{\facts}{\section{FACTS}}
+
+%% Provides a signature command
+\newcommand{\signature}
+{
+  \vspace*{3em}\flushright%
+  \@author\\\@date
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Typesetting
+%%%%%
+
+%% Formatting section and subsection titles
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}
+  {\vspace*{-0.25em}\underline{\MakeUppercase{#1}}\medskip}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesection}{1em}
+  {\vspace*{-0.25em}\underline{#1}\medskip}
+\titleformat{\subsubsection}{\normalfont}{\thesection}{1em}
+  {\medskip\underline{#1}\medskip}
+
+%% Headers and Footers
+\fancyhf{} % clear all
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\rfoot{\thepage}
+\pagestyle{fancy}
+
+%% Supress numbering for sections
+\setcounter{secnumdepth}{0}

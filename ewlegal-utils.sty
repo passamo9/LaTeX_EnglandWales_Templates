@@ -1,0 +1,35 @@
+%% TODO Stock beginning text, copyrights and project info and all that
+
+\ProvidesPackage{engwales-utils}[2021-02-21 England and Wales Legal Utilities]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Variables
+%%%%%
+
+%% Sets optional options of the point env
+% \newcommand{\pointspacing}{leftmargin=0cm,labelsep=1cm}
+% TODO This work around to reusing the point env does not work. FIX!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Typeset Elements
+%%%%%
+
+%% Implement tramlines for use in titles, element is not centred, or bolded
+\newcommand{\tramlines}[1]
+{
+\renewcommand\arrayrulewidth{1.1pt}
+\begin{tabular}{@{\hspace{12pt}}c@{\hspace{12pt}}}
+  \hline\\[-12pt]
+  \MakeUppercase{\@title}\\\ \\[-12pt]
+  \hline
+\end{tabular}
+}
+
+%% Allow for you to list items with the number somewhere
+\newcounter{point}
+\newenvironment{point}[1][leftmargin=0cm,labelsep=1cm]
+{\medskip\begin{enumerate}[#1]\refstepcounter{point}
+   \item[\thepoint.]
+}{\end{enumerate}\smallskip}

@@ -1,0 +1,58 @@
+%% TODO Stock beginning text, copyrights and project info and all that
+
+\ProvidesPackage{engwales-plead}[2021-02-13 England and Wales Pleading Legal Template]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Variables
+%%%%%
+
+%% For determining text in the title
+\newcommand{\court}[1]{\def\@court{#1}}
+\newcommand{\casenumber}[1]{\def\@casenumber{#1}}
+\newcommand{\claimant}[1]{\def\@claimant{#1}}
+\newcommand{\defendant}[1]{\def\@defendant{#1}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Typeset Elements
+%%%%%
+
+%% Format the title
+\renewcommand\maketitle{%
+  \begingroup
+  \linespread{1.5}\setlength\parindent{0pt}\bfseries
+  \parbox[t]{.65\textwidth}{\uline{\@court}}
+  Case No~\@casenumber
+
+  \vspace{24pt}
+
+  \so{BETWEEN}
+  \begin{center}\@claimant\end{center}
+  \begin{flushright}\uline{Claimant}\end{flushright}
+  \begin{center}and\end{center}
+  \begin{flushright}\end{flushright}
+  \begin{center}\@defendant\end{center}
+  \begin{flushright}\uline{Defendant}\end{flushright}
+
+  \vspace{0pt}
+
+  \begin{center}
+    \tramlines{\@title}
+  \end{center}
+  \vspace{24pt}
+  \endgroup
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Typesetting
+%%%%%
+
+%% Headers and Footers
+\fancyhf{} % clear all
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\rfoot{\thepage}
+\pagestyle{fancy}
