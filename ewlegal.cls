@@ -1,6 +1,6 @@
 %% TODO Stock beginning text, copyrights and project info and all that
 
-%% Work consists of the files engwales-legal.cls and accompanying engwales-*.sty
+%% Work consists of the files ewlegal.cls and accompanying ewlegal-*.sty
 
 
 \NeedsTeXFormat{LaTeX2e}
