@@ -81,4 +81,4 @@
 %%%%%
 
 %% Set linespacing to be 1.5 % Seems to be the most commonly suggested
-\linespread{1.5}
+\linespread{1.3}
