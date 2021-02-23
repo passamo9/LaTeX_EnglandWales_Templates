@@ -7,7 +7,7 @@
 \ProvidesClass{ewlegal}[2021-02-21 Legal Templates for England and Wales]
 
 %% Uses article as a base
-\LoadClass[12pt,a4paper]{article}% TODO Perhaps use KOMA-Script?
+\LoadClass[12pt,a4paper]{article} % TODO Perhaps use KOMA-Script?
 
 
 
