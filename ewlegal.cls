@@ -22,7 +22,6 @@
 % TODO Be able to nicely handle multiple templates being selected
 
 \DeclareBoolOption[false]{pleading}
-
 \DeclareBoolOption[false]{opinion}
 
 
