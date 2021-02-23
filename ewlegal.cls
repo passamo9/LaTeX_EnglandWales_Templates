@@ -54,7 +54,7 @@
 \RequirePackage{soul}
 % Doesn't seem to be reccommended anymore due to issues with luatex
 
-% What does this do?
+%% Provides a better underline mechanic in the form of \uline
 \RequirePackage[normalem]{ulem}
 
 %% Expand the feature set of typeset lists
