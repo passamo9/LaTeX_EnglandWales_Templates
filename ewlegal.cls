@@ -65,7 +65,7 @@
 % reasonable defaults?
 
 
-%% Engwales-legal Packages
+%% ewlegal Packages
 
 \RequirePackage{ewlegal-utils}
 
