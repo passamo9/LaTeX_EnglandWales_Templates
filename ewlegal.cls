@@ -50,7 +50,8 @@
 
 %% Spaced out boxes
 \RequirePackage{soul}
-% Doesn't seem to be reccommended anymore due to issues with luatex
+% TODO Doesn't seem to be reccommended anymore due to issues with luatex, so
+%      perhaps replace?
 
 %% Provides a better underline mechanic in the form of \uline
 \RequirePackage[normalem]{ulem}
