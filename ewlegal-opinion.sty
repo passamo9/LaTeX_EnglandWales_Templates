@@ -9,7 +9,8 @@
 %%%%%
 
 %% Formatting the main title
-\renewcommand\maketitle{%
+\renewcommand{\maketitle}
+{%
   \begin{center}
     \bfseries
     \tramlined{\@title}
@@ -20,10 +21,6 @@
 %% Determine the spacing of the numbers in the point env
 % \renewcommand{\pointspacing}{leftmargin=0,labelsep=1cm}
 % TODO This work around to reusing the point env does not work. FIX!
-
-%% Create intro and facts commands for supposed convience
-\newcommand{\intro}{\section{INTRODUCTION}}
-\newcommand{\facts}{\section{FACTS}}
 
 %% Provides a signature command
 \newcommand{\signature}
