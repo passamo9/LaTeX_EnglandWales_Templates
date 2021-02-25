@@ -17,11 +17,10 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-            pleading.tex
-            opinion.tex
-          working_directory:
-            examples
+            examples/pleading.tex
+            examples/opinion.tex
           latexmk_use_xelatex: true
+          args: "-outdir=examples/"
       - uses: fregante/setup-git-user@v1
       - if: github.event_name == 'push'
         name: Upload PDF to examples branch

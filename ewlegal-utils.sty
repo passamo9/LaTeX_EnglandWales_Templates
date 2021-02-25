@@ -1,0 +1,39 @@
+%% TODO Stock beginning text, copyrights and project info and all that
+
+\ProvidesPackage{ewlegal-utils}[2021-02-21 England and Wales Legal Utilities]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Variables
+%%%%%
+
+%% Sets optional options of the point env
+% \newcommand{\pointspacing}{leftmargin=0cm,labelsep=1cm}
+% TODO This work around to reusing the point env does not work. FIX!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Typeset Elements
+%%%%%
+
+%% Implement tramlines for use in titles, element is not centred, or bolded
+% TODO Cleanup magic numbers
+\newcommand{\tramlined}[1]
+{%
+\renewcommand\arrayrulewidth{1.1pt}
+\begin{tabular}{@{\hspace{12pt}}c@{\hspace{12pt}}}
+  \hline\\[-12pt]
+  \MakeUppercase{#1}\\\ \\[-12pt]
+  \hline
+\end{tabular}
+}
+
+%% Allow for you to list items with the number somewhere
+\newlist{points}{enumerate}{3}
+\setlist[points]
+{%
+  label=\arabic*.,
+  resume,
+  leftmargin=0cm,
+  labelsep=1cm,
+}

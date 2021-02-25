@@ -1,7 +1,5 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{../engwales-opinion}
+\documentclass[opinion]{ewlegal}
 
-\usepackage[margin=2.5cm]{geometry}
 \usepackage{blindtext}
 
 \title{An Opinion Written For a Client}
@@ -11,15 +9,21 @@
 \begin{document}
 \maketitle
 
-\intro%
-\begin{point}
-  \blindtext%
-\end{point}
-\facts%
-\begin{point}
-  \blindtext%
-\end{point}
+\section{INTRODUCTION}
+\begin{points}
+  \item \blindtext%
+\end{points}
+\section{FACTS}
+\begin{points}
+  \item \blindtext%
+\end{points}
 \subsection{Subsection 1}
+\begin{points}
+  \item \blindtext%
+\end{points}
 \subsubsection{Subsection 2}
-\signature
+\begin{points}
+  \item \blindtext%
+\end{points}
+\signature%
 \end{document}
