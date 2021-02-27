@@ -22,6 +22,11 @@ jobs:
           working_directory:
             examples
           latexmk_use_xelatex: true
+      - name: Upload PDFs to artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: example-pdfs
+          path: examples/*.pdf
       - uses: fregante/setup-git-user@v1
       - if: github.event_name == 'push'
         name: Upload PDF to examples branch
